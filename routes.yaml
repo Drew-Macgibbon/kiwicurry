@@ -2,6 +2,10 @@ routes:
   /rss/:
     template: rss
     content_type: text/xml
+  /bucket-list/:
+    controller: channel
+    filter: tag:lists
+    template: bucket-list
 
 collections:
   /:

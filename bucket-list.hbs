@@ -1,0 +1,16 @@
+{{!< default}}
+
+<div class="w-full">
+    <main class="blog-width">
+        <section class="posts">
+            {{#get "posts" filter="tag:lists" limit="all" as |lists|}}
+            {{#foreach lists}}
+                <article class="post">
+                <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+                {{content}}
+                </article>
+            {{/foreach}}
+            {{/get}}
+        </main>
+    </div>
+</section>
