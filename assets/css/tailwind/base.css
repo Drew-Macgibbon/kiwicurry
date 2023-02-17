@@ -1,1 +1,16 @@
 @tailwind base;
+
+/* color selector, these are just used to easily configure colors */
+
+.color-selector {
+  --color-primary: hsl(198deg 93% 60% / 0.8);
+  --color-secondary: hsl(198deg 93% 60%);
+}
+
+@layer base {
+  :root {
+    /* For hsl(198deg 93% 60% / <alpha-value>) added as variable to tailwind.config */
+    --color-primary: 198deg 93% 60%;
+    --color-secondary: 198deg 93% 60%;
+  }
+}

@@ -2070,19 +2070,20 @@ blockquote.kg-blockquote-alt {
 }
 
 :root {
-    --brand-color: var(--ghost-accent-color, #fc7e0f);
-    --primary-text-color: #5a656b;
-    --secondary-text-color: #aaa;
-    --white-color: #fff;
-    --light-gray-color: #f6f6f6;
-    --mid-gray-color: #e6e6e6;
-    --dark-gray-color: #a8aab1;
-    --darker-gray-color: #1a1a1a;
-    --black-color: #000;
-    --animation-base: ease-in-out;
-    --font-sans: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: Lora, Times, serif;
-    --content-font-size: 1.6rem;
+  --brand-color: var(--ghost-accent-color, #fc7e0f);
+  --primary-text-color: #5a656b;
+  --secondary-text-color: #aaa;
+  --white-color: #fff;
+  --light-gray-color: #f6f6f6;
+  --mid-gray-color: #e6e6e6;
+  --dark-gray-color: #a8aab1;
+  --darker-gray-color: #1a1a1a;
+  --black-color: #000;
+  --animation-base: ease-in-out;
+  --font-sans: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif;
+  --font-serif: Lora, Times, serif;
+  --content-font-size: 1.6rem;
 }
 
 .site {
@@ -3177,6 +3178,12 @@ video {
   display: none;
 }
 
+:root {
+    /* For hsl(198deg 93% 60% / <alpha-value>) added as variable to tailwind.config */
+    --color-primary: 198deg 93% 60%;
+    --color-secondary: 198deg 93% 60%;
+  }
+
 *, ::before, ::after {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -3271,6 +3278,14 @@ video {
     --tw-backdrop-sepia:  ;
 }
 
+/* color selector, these are just used to easily configure colors */
+
+.color-selector {
+  --color-primary: hsl(198deg 93% 60% / 0.8);
+  --color-secondary: hsl(198deg 93% 60%);
+  --color-secondary: #fff;
+}
+
 .container {
     width: 100%;
 }
@@ -3328,6 +3343,10 @@ video {
 
 .grid {
     display: grid;
+}
+
+.w-full {
+    width: 100%;
 }
 
 .transform {
